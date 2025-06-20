@@ -5,33 +5,36 @@
     
     <title>Enquiries</title>
     <link rel="stylesheet" href="CSS/styles.css">
-
+    
+   
 </head>
 
 
 <body>
 <header>
+    <main>
+
     <h2 class="logo">JOYS Of ice*</h2>
 <nav class="main-nav">
     <ul class="nav">
     
-        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-        <li class="nav-item"><a class="nav-link" href="about us.html">ABOUT</a></li>
-        <li class="nav-link"><a class="nav-link" href="products.html">PRODUCTS</a></li>
-        <li class="nav-item"><a class="nav-link" href="enquiries.html">ENQUIRY</a></li>
-         <li class="nav-item"><a class="nav-link" href="contact us.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html" id="enquiries-home-link">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about us.html" id="enquiries-about-link">ABOUT</a></li>
+        <li class="nav-link"><a class="nav-link" href="products.html" id="enquiries-products-link">PRODUCTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="enquiries.html" id="enquiries-enquiry-link">ENQUIRY</a></li>
+         <li class="nav-item"><a class="nav-link" href="contact us.html" id="enquiries-contact-link">CONTACT</a></li>
     
     </ul>
 </nav>
 
 </header>
 
-     <p>Talk to us:</p>
-     <p>Tel:0723451926</p>
-     <p>More info @Joysoficecream.co.za</p>
+     <p id="talk-to-us-text">Talk to us:</p>
+     <p id="enquiries-tel">Tel:0723451926</p>
+     <p id="enquiries-email">More info @Joysoficecream.co.za</p>
 
 
-     <p><u><b>Joys Of Ice Cream</b></u></h4></p>
+     <h4 id="enquiries-heading"><p><u><b>Joys Of Ice Cream</b></u></h4></p>
      <p> Indulge in our ice creams where each scoop is a chapter in the story of hapiness,warmth,and life's
          little delights.</p>
 
@@ -40,10 +43,64 @@
      alt="chocolate sundae" height="400px"width="300px">
 
 
-</body>
+     <!-- Enquiry Form -->
+        <form id="enquiry-form">
+            <h2>Submit Your Enquiry</h2>
+            <label for="enquiry-name">Name:</label>
+            <input type="text" id="enquiry-name" name="name" required minlength="2">
+            <span class="error-message" id="name-error"></span>
+
+            <label for="enquiry-email">Email:</label>
+            <input type="email" id="enquiry-email" name="email" required>
+            <span class="error-message" id="email-error"></span>
+
+            <label for="enquiry-phone">Phone Number (optional):</label>
+            <input type="tel" id="enquiry-phone" name="phone" pattern="[0-9]{10}" placeholder="e.g 0745378931">
+            <span class="error-message" id="phone-error"></span>
+
+            <label for="inquiry-type">What are you enquiring about?</label>
+            <select id="inquiry-type" name="inquiryType" required>
+                <option value="">--Please choose an option--</option>
+                <option value="products">Products</option>
+                <option value="services">Services</option>
+                <option value="volunteer">Becoming a Volunteer</option>
+                <option value="sponsor">Becoming a Sponsor</option>
+            </select>
+            <span class="error-message" id="inquiry-type-error"></span>
+
+            <label for="enquiry-message">Your Message:</label>
+            <textarea id="enquiry-message" name="message" rows="5" required minlength="10" maxlength="500"></textarea>
+            <span class="error-message" id="message-error"></span>
+
+            <button type="submit" id="submit-enquiry-btn">Submit Enquiry</button>
+            <div id="enquiry-response" style="margin-top: 15px; text-align: center;"></div>
+        </form>
+
+        <!-- Placeholder for Interactive Map -->
+        <div id="map-area" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.038845064836!2d30.954221374594134!3d-25.470378334489077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee84a77a7861a6f%3A0xfe78656fd1b0eb75!2zaeKAmWxhbmdhIE1hbGw!5e0!3m2!1sen!2sza!4v1750325241511!5m2!1sen!2sza"
+             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+
+     </main>
+
+
+
 <footer>
 
-    <p>Joys Of Ice Cream &copy;2025. Allrights reserved.</p>
+    <p id="enquiries-copyright-info">Joys Of Ice Cream &copy;2025. All rights reserved.</p>
 
 </footer>
+
+
+ <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdZTMTpXTMT1X-JmE--v03E5bYiM90RPA&callback=initMap">
+        </script>
+
+ <script src="JavaScript/script.js"></script>
+
+</body>
 </html>
