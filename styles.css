@@ -6,6 +6,9 @@
 
 }
 
+
+*, *::before, *::after { box-sizing: inherit; }
+
 ul{
     float: left;
     display: flex;
@@ -151,43 +154,19 @@ header{
         text-align: center;
     }
     
-     /*Img Styling*/
-    .images{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2em;
-        margin-top: 2em;
-        align-items: center;
-    }
-    .images img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease;
 
-    }
-    .images:hover{
-        transform: scale(1.05);
-    }
-    .images p{
-        text-align: center;
-        font-family: sans-serif;
-        color: #555;
-        margin-top: 0.5em;
-    }
-   
 
     .images-container {
-        display: flex;
-        flex-direction: column ;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2em;
-        margin-top: 3em;
-        align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 3em;
+    align-items: center;
+    padding: 10px;
     }
+
+
 .product-item{
     text-align: center;
     justify-content: center;
@@ -196,33 +175,295 @@ header{
    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
     align-items: center;
-
+     width: 280px; 
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+
+.product-item:hover {transform: translateY(-5px); /* Lifts the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+
+
 .product-item p{
     margin-top: 0;
     font-weight: bold;
     color: #777;
 }
 .products-item img{
-    max-width: 100%;/*Assures that images don't outfill their container*/
-    height: auto;/*Sustains aspect ratio*/
+    max-width: 100%;/*Gurantees that images don't exceed their container*/
+    height: auto;/*Maintains aspect ratio*/
     border-radius: 8px;
     margin-bottom: 0.5em;
-    transition: transform 0.3s ease;
 
+transition: transform 0.3s ease, opacity 0.3s ease, border 0.3s ease, background-color 0.3s ease, 
+filter 0.3s ease; /* More explicit transitions */
+     object-fit: cover; /* Crops image to fit without distorting aspect ratio */
     
 }
 .products-img {
     opacity: 1;
     transition: 0.3s;
-
+float: left;
+  width: 25%;
 }
 .products-img:hover{
     opacity: 0.8;
     border: 2px solid black;
     background-color: #2196f3;
+    transform: scale(2.8); /* Make the images to zoom out when hovering around them */
+    filter: brightness(1.05); 
 
 }
+
+.product-item>.images{
+  padding: 0 8px;
+}
+
+
+.images:after{
+content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+        /* For product search bar */
+        .search-container {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px; /* Constrain width for better appearance */
+            padding: 15px;
+            background-color: #e7dbdb;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(34, 33, 33, 0.1);
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            border: 1px solid #e4dbdb;
+            border-radius: 5px;
+            width: calc(100% - 22px); /* Affects sizing of padding and border */
+            font-size: 1em;
+        }
+
+
+
+
+
+         /* styling for forms and error messages */
+        form {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: #ecd6d6;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(19, 18, 18, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #3d3333;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form select,
+        form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #d3bfbf;
+            border-radius: 4px;
+            box-sizing: border-box; /* Involves padding in width */
+        }
+        form button {
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #1b2bb8;
+        }
+        .error-message {
+            color: rgb(107, 14, 22);
+            font-size: 0.9em;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+
+#map-area {
+
+    width: 100%;
+     height: 400px;
+      background-color:rgb(241, 239, 219);
+       display: flex;
+        justify-content:center;
+       align-items:center;
+       border-radius: 2em auto;
+      margin:2em auto; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/*Animation for the homepage*/
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(21px); /* Begin 21px below end position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+#welcome-heading {
+    font-size: 2.6em;
+    margin-top: 1.1em;
+    opacity: 0; /* Makes sure it begins hidden */
+    animation: fadeInSlideUp 1.4s ease-out 0.6s forwards; /*Time of the animation*/
+}
+
+#tagline-paragraph {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 2em;
+    opacity: 0; /* Assures it starts hidden */
+    animation: fadeInSlideUp 1.6s ease-out 1.1s forwards; /* Animation with a slightly longer hold */
+}
+
+
+
+
+
 
