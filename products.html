@@ -4,6 +4,7 @@
 
     <title>Products.html</title>
     <link rel="stylesheet" href="CSS/styles.css">
+   
 
 </head>
 <body>
@@ -13,145 +14,175 @@
 <nav class="main-nav">
 
 <ul class="nav">
-    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-    <li class="nav-item"><a class="nav-link" href="about us.html">ABOUT</a></li>
-    <li class="nav-item"><a class="nav-link" href="products.html">PRODUCTS</a></li>
-    <li class="nav-item"><a class="nav-link" href="enquiries.html">ENQUIRY</a></li>
-    <li class="nav-item"><a class="nav-link" href="contact us.html">CONTACT</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html" id="products-home-link">HOME</a></li>
+    <li class="nav-item"><a class="nav-link" href="about us.html" id="products-about-link">ABOUT</a></li>
+    <li class="nav-item"><a class="nav-link" href="products.html" id="products-products-link">PRODUCTS</a></li>
+    <li class="nav-item"><a class="nav-link" href="enquiries.html" id="products-enquiry-link">ENQUIRY</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact us.html" id="products-contact-link">CONTACT</a></li>
 
 </ul>
 </nav>
 </header>
 
+ <main>
+        <h1 id="products-heading">Our Products</h1>
 
-<h1>Our Products</h1>
-<div class="images-container">
-    <div class="product-item">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="product-search-input" placeholder="Search products...">
+        </div>
+
+        <!-- Products Display Container -->
+        <div class="images-container" id="product-images-container">
         
-      <div class="images">
 
-    <img class="products-img" src="img/variants of ice creams.jpeg" srcset="variants of ice creams-small.jpg 320w, variants of ice creams
-    -medium.jpg 768w,variants of ice creams-large.jpg 1200w"
-    alt="chocolate ice cream"height="300px"width="300px">
-    <p>Chocolate ice cream</p>
+            <div class="product-item">
+                <img class="products-img" src="img/variants of ice creams.jpeg"
+                     srcset="img/variants of ice creams-small.jpg 320w,
+                             img/variants of ice creams-medium.jpg 768w,
+                             img/variants of ice creams-large.jpg 1200w"
+                     alt="Variants ice cream" height="300px" width="600px">
+                <p>Variants of ice creams</p>
+            </div>
+
+            <div class="product-item">
+                <img class="products-img" src="img/blueberry ice cream.jpeg"
+                     srcset="img/blueberry ice cream-small.jpg 320w,
+                             img/blueberry ice cream-medium.jpg 768w,
+                             img/blueberry ice cream.jpeg 1200w"
+                     alt="Blueberry ice cream" height="300px" width="600px">
+                <p>Blueberry ice cream</p>
+            </div>
+
+            <div class="product-item">
+                <img class="products-img" src="img/chocolate sundae.webp"
+                     srcset="img/chocolate sundae-small.webp 320w,
+                             img/chocolate sundae-medium.jpg 768w,
+                             img/chocolate sundae-large.jpg 1200w"
+                     alt="Chocolate ice-cream sundae" height="300px" width="600px">
+                <p>Chocolate ice-cream sundae</p>
+            </div>
+
+            <div class="product-item">
+                <img class="products-img" src="img/mint ice cream.jpeg"
+                     srcset="img/mint ice cream-small.jpg 320w,
+                             img/mint ice cream-medium.jpg 768w,
+                             img/mint ice cream-large.jpg 1200w"
+                     alt="Mint ice cream" height="300px" width="600px">
+                <p>Mint ice cream</p>
+            </div>
+
+            <div class="product-item">
+                <img class="products-img" src="img/strawberry flavoured vegan ice cream.webp"
+                     srcset="img/strawberry flavored vegan ice cream-small.webp 320w,
+                             img/strawberry flavored vegan ice cream-medium.jpg 768w,
+                             img/strawberry flavored ice cream-larfe.jpg 1200w"
+                     alt="Strawberry vegan ice cream" height="300px" width="600px">
+                <p>Strawberry vegan ice cream</p>
+            </div>
+
+            <div class="product-item">
+                <img class="products-img" src="img/sundae.jpeg"
+                     srcset="img/chocolate muffin ice cream-small.jpg 320w,
+                             img/chocolate muffin ice cream-medium.jpg 768w,
+                             img/chocolate ice cream-large.jpg 1200w"
+                     alt="Chocolate muffin ice cream" height="300px" width="600px">
+                <p>Chocolate muffin ice cream</p>
+            </div>
+
+            <div class="product-item">
+                <img class="products-img" src="img/vegan granadilla ice cream.webp"
+                     srcset="img/vegan granadilla ice cream.jpg-small 320w,
+                             img/vegan granadilla ice cream-medium.jpg 768w,
+                             img/vegan-ice cream-large.jpg 1200w"
+                     alt="Vegan granadilla ice cream" height="300px" width="600px">
+                <p>Vegan granadilla ice cream</p>
+            </div>
+
+            <div class="product-item">
+                <img class="products-img" src="img/pexels-jeshoots-3631.jpg"
+                     srcset="img/vegan ice cream-small.jpg 320w,
+                             img/vegan ice cream-medium.jpg 768w,
+                             img/vegan ice cream-large.jpg 1200w"
+                     alt="Vegan ice cream" height="300px" width="600px">
+                <p>Vegan ice cream</p>
+            </div>
 
 
+        </div>
 
-    <img class="products-img" src="img/blueberry ice cream.jpeg" srcset="blueberry ice cream-small.jpg 320w, blueberry ice cream-medium.jpg
-    768w, blueberry ice cream.jpg 1200w" 
-    alt="blueberry cream"height="300px"width="300px">
-    <p> Blueberry ice cream</p>
+        <!-- Price List Table -->
+         
+         <div class="price list">
 
-    <img class="products-img" src="img/chocolate sundae.webp" srcset="chocolate sundae-small 320w, chocolate sundae-medium.jpg
-    768w, chocolate sundae-large.jpg 1200w "
-    alt="chocolate sundae"height="300px"width="300px">
-    <p> Chocolate ice-cream sundae</p>
-
-
-    <img class="products-img" src="img/mint ice cream.jpeg" srcset="mint ice cream-small.jpg 320w, mint ice cream-medium.jpg 768w, 
-     mint ice cream-large.jpg 1200w" alt="mint ice cream"height="300px"width="300px">
-    <p>Mint ice cream</p>
-
-    <img class="products-img" src="img/strawberry flavoured vegan ice cream.webp" srcset="strawberry flavored vegan ice cream-small.jpg 320w,
-     strawberry flavored vegan ice cream-medium.jpg 768w, strawberry flavored ice cream-larfe.jpg 1200w"
-    alt="vegan ice cream"height="300px"width="300x">
-    <p> Vegan ice cream</p>
-
-    <img class="products-img" src="img/sundae.jpeg" srcset="chocolate muffin ice cream-small.jpg 320w, chocolate muffin ice cream-medium
-    .jpg 768w, chocolate ice cream-large.jpg 1200w"
-    alt="chocolate muffin ice cream"height="300px"width='300px'>
-    <p> Chocolate muffin ice cream</p>
-
-    <img class="products-img" src="img/vegan granadilla ice cream.webp" srcset="vegan granadilla ice cream.jpg-small 320w, vegan ice cream-medium.jpg 768w,
-    vegan-ice cream-large.jpg 1200w"
-    alt="vegan granadilla ice cream"height="300px"width="300px">
-    <p> Vegan granadilla ice cream</p>
-
-    <img class="products-img" src="img/pexels-jeshoots-3631.jpg" srcset="vegan ice cream-small.jpg 320w, vegan ice cream-medium.jpg 768w, 
-     vegan ice cream-large 1200w"
-    alt=" vegan ice cream"height="300px"width="300px">
-    <p> Vegan ice cream</p>
-
-
-</div>
-
-
-</div>
-</div>
-
-</body>
-<div class="price-list">
-<h2><p><b>Price list</b></p></h2>
-
-
-<!----Table showung prices of ice creamss-->
-<table>
-<tr>
-    <th>Ice Creams</th>
-    <th>Cones</th>
-    <th>Cup</th>
-</tr>
-<tr>
-<td>Chocolate ice cream</td>
-<td>R20</td>
-<td>R30</td>
-</tr>
-
-<tr>
-<td>Blueberry ice cream</td>
-<td>R15</td>
-<td>R25</td>
-</tr>
-
-<tr>
-<td>Chocolate sundae</td>
-<td>R25</td>
-<td>R35</td>
-</tr>
-
-<tr>
-    <td>Mint ice cream</td>
-    <td>R25</td>
-    <td>R35</td>
-</tr>
-
-<tr>
-<td>Strawberry vegan ice cream</td>
-<td>R27</td>
-<td> R37</td>
-</tr>
-
-<tr>
-<td>Chocolate muffin ice cream</td>
-<td>R28</td>
-<td>R36</td>
-</tr>
-
-<tr>
-<td>Vegan granadilla ice cream</td>
-<td>R25</td>
-<td>R30</td>
-</tr>
-
-<tr>
-    <td>Vegan ice cream</td>
-    <td>R17</td>
-    <td>R25</td>
-</tr>
-
+        <h2>Price list</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ice Creams</th>
+                    <th>Cones</th>
+                    <th>Cup</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chocolate ice cream</td>
+                    <td>R20</td>
+                    <td>R30</td>
+                </tr>
+                <tr>
+                    <td>Blueberry ice cream</td>
+                    <td>R15</td>
+                    <td>R25</td>
+                </tr>
+                <tr>
+                    <td>Chocolate sundae</td>
+                    <td>R25</td>
+                    <td>R35</td>
+                </tr>
+                <tr>
+                    <td>Mint ice cream</td>
+                    <td>R25</td>
+                    <td>R35</td>
+                </tr>
+                <tr>
+                    <td>Strawberry vegan ice cream</td>
+                    <td>R27</td>
+                    <td>R37</td>
+                </tr>
+                <tr>
+                    <td>Chocolate muffin ice cream</td>
+                    <td>R28</td>
+                    <td>R36</td>
+                </tr>
+                <tr>
+                    <td>Vegan granadilla ice cream</td>
+                    <td>R25</td>
+                    <td>R30</td>
+                </tr>
+                <tr>
+                    <td>Vegan ice cream</td>
+                    <td>R17</td>
+                    <td>R25</td>
+                </tr>
+            </tbody>
         </table>
-    </div>
-    </body>
-    
-    <footer>
-<p>
-Tel:0723451926</p>
-    
-   <p> Joys Of Ice Cream &copy;2025.All rights reserved</p>
+        </div>
 
+    </main>
+
+    <footer>
+        <p id="copyright-info-products">Joys Of Ice Cream &copy; 2025. All rights reserved.</p>
     </footer>
 
+    <!-- Lightbox Modal Structure -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-modal-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption" class="lightbox-caption"></div>
+    </div>
 
-
+    <script src="JavaScript/script.js"></script>
 </body>
-</html> 
+</html>
+
