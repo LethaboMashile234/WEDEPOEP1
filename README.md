@@ -1,3 +1,5 @@
+UPDATES ON THE PAGES.
+There is now functionality on my website. The contact page and the enquiry pages both have forms and an embedded map to show the location of my business. There is an animation added on the homepage’s welcome heading. The images of the products page have all been wrapped in their individual container/wrapping. There is a lightbox effect added on the images to show which picture the viewer is looking at. The pages are responsive and could be minimized making the pictures to adapt to the screen.
 
 1. Organization Overview	
 •	Name: JOYS OF ICE CREAM (EAT, LIVE, BREATH ICE CREAM)
